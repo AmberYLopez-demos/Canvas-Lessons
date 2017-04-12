@@ -1,9 +1,9 @@
-## Canvas从入门到放弃<small>－－系列教程</small>
+## Canvas从入门到放弃－－系列教程
 
 ### Canvas从入门到放弃(一)
 *主要是Canvas的线条绘制及其属性*
 
-博客详细教程：[Canvas从入门到放弃(一)]()
+博客详细教程：[Canvas从入门到放弃(一)](http://www.jianshu.com/p/22aad1799524)
 
 
 **课程列表**
