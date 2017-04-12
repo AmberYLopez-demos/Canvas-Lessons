@@ -1,6 +1,6 @@
-## Canvas从入门到放弃　　　－－系列教程
+## Canvas从入门到放弃　　　<small>－－系列教程</small>
 
-#### Canvas从入门到放弃(一)
+### Canvas从入门到放弃(一)
 *主要是Canvas的线条绘制及其属性*
 
 博客详细教程：[Canvas从入门到放弃(一)]()
@@ -20,5 +20,5 @@
 * demo9: [Canvas实战－五角星](https://github.com/AmberYLopez-demos/Canvas-Lessons/blob/master/Lesson1/demo9.html)
 
 
-#### Canvas从入门到放弃(二)
+### Canvas从入门到放弃(二)
 请期待......
