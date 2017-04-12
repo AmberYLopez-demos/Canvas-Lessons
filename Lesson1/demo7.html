@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas教程－矩形</title>
+</head>
+<body>
+<canvas id="canvas" style="border: 1px solid #555;display: block;margin:50px auto;"></canvas>
+<script>
+    window.onload = function () {
+        var canvas = document.getElementById("canvas");
+        canvas.width = 500;
+        canvas.height = 400;
+        var context = canvas.getContext("2d");
+        //使用rect()画一个矩形
+        drawRect(context, 50, 50, 200, 200, 5, "#058", "#ffcc99");
+
+        //使用strokeRect(),fillRect()画一个矩形
+        drawRect2(context, 150, 150, 200, 200, 5, "#058", "#ff99cc");
+    };
+    function drawRect(cxt, x, y, width, height, borderWidth, borderColor, fillColor) {
+        cxt.beginPath();
+        cxt.rect(x, y, width, height);
+        cxt.closePath();
+
+        cxt.lineWidth = borderWidth;
+        cxt.strokeStyle = borderColor;
+        cxt.fillStyle = fillColor;
+
+        cxt.fill();
+        cxt.stroke();
+
+    }
+    function drawRect2(cxt, x, y, width, height, borderWidth, borderColor, fillColor) {
+        cxt.lineWidth = borderWidth;
+        cxt.strokeStyle = borderColor;
+        cxt.fillStyle = fillColor;
+
+        cxt.fillRect(x, y, width, height);
+        cxt.strokeRect(x, y, width, height);
+    }
+</script>
+</body>
+</html>

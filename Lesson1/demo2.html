@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas教程－画多条直线(lineTo)</title>
+</head>
+<body>
+<canvas id="canvas" style="border: 1px solid #555;display: block;margin:50px auto;"></canvas>
+<script>
+    window.onload = function () {
+        var canvas = document.getElementById("canvas");
+        canvas.width = 500;
+        canvas.height = 400;
+        var context = canvas.getContext("2d");
+
+        //画一个三角形
+        //假设有个笔尖移动到 (100,100)这个位置
+        context.moveTo(100, 100);
+        context.lineTo(300, 300);
+        context.lineTo(100, 300);
+        context.lineTo(100, 100);
+        //进行线条粗细设置
+        context.lineWidth = 5;
+        //进行线条样式设置
+        context.strokeStyle = "#058";
+        //绘制出通过 moveTo() 和 lineTo() 方法定义的路径。默认颜色是黑色。
+        context.stroke();
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas教程－线条属性lineCap</title>
+</head>
+<body>
+<canvas id="canvas" style="border: 1px solid #555;display: block;margin:50px auto;"></canvas>
+<script>
+    window.onload = function () {
+        var canvas = document.getElementById("canvas");
+        canvas.width = 500;
+        canvas.height = 500;
+        var context = canvas.getContext("2d");
+
+        context.lineWidth = 30;
+        context.strokeStyle = "#058";
+
+        context.beginPath();
+        context.moveTo(100, 100);
+        context.lineTo(400, 100);
+        context.lineCap = "butt";
+        context.stroke();
+
+        context.beginPath();
+        context.moveTo(100, 200);
+        context.lineTo(400, 200);
+        context.lineCap = "round";
+        context.stroke();
+
+        context.beginPath();
+        context.moveTo(100, 300);
+        context.lineTo(400, 300);
+        context.lineCap = "square";
+        context.stroke();
+
+        //baseLine
+        context.lineWidth = 2;
+        context.strokeStyle = "#555";
+
+        context.beginPath();
+        context.moveTo(100, 60);
+        context.lineTo(100, 350);
+        context.stroke();
+
+        context.beginPath();
+        context.moveTo(400, 60);
+        context.lineTo(400, 350);
+        context.stroke();
+
+    }
+</script>
+</body>
+</html>

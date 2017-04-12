@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas教程－beginPath()</title>
+</head>
+<body>
+<canvas id="canvas" style="border: 1px solid #555;display: block;margin:50px auto;"></canvas>
+<script>
+    window.onload = function () {
+        var canvas = document.getElementById("canvas");
+        canvas.width = 600;
+        canvas.height = 600;
+        var context = canvas.getContext("2d");
+
+        //开始一条路径
+        context.beginPath();
+        context.moveTo(100, 100);
+        context.lineTo(300, 300);
+        context.lineTo(100, 500);
+
+        context.lineWidth = 5;
+        context.strokeStyle = "#058";
+        context.stroke();
+
+        //开始一条路径
+        context.beginPath();
+        context.moveTo(200, 100);
+        context.lineTo(400, 300);
+        context.lineTo(200, 500);
+
+        context.lineWidth = 5;
+        context.strokeStyle = "#ffcc99";
+        context.stroke();
+
+        //开始一条路径
+        context.beginPath();
+        context.moveTo(300, 100);
+        context.lineTo(500, 300);
+        context.lineTo(300, 500);
+
+        context.lineWidth = 5;
+        context.strokeStyle = "#ff99cc";
+        context.stroke();
+    }
+</script>
+</body>
+</html>

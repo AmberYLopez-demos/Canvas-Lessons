@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas教程－填充</title>
+</head>
+<body>
+<canvas id="canvas" style="border: 1px solid #555;display: block;margin:50px auto;"></canvas>
+<script>
+    window.onload = function () {
+        var canvas = document.getElementById("canvas");
+        canvas.width = 500;
+        canvas.height = 400;
+        var context = canvas.getContext("2d");
+
+        context.beginPath();
+        context.moveTo(100, 100);
+        context.lineTo(300, 300);
+        context.lineTo(100, 300);
+        context.closePath();
+        //进行线条粗细设置
+        context.lineWidth = 5;
+        //进行填充样式设置
+        context.fillStyle = "#058";
+        context.fill();
+    }
+</script>
+</body>
+</html>
