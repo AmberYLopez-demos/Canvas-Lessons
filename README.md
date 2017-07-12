@@ -22,6 +22,7 @@
 ### Canvas从入门到放弃(二)
 *主要是Canvas的图形变换及样式填充属性*
 
+博客详细教程：[Canvas从入门到放弃(二)](http://www.jianshu.com/p/4e3761ef0f66)
 
 **课程列表**
 
