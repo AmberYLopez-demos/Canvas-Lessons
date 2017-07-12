@@ -20,4 +20,12 @@
 
 
 ### Canvas从入门到放弃(二)
-请期待......
+* demo1: [Canvas教程－图形的变换(translate)](https://github.com/AmberYLopez-demos/Canvas-Lessons/blob/master/Lesson2/demo1.html)
+* demo2: [Canvas教程－图形的变换与保存](https://github.com/AmberYLopez-demos/Canvas-Lessons/blob/master/Lesson2/demo2.html)
+* demo3: [Canvas教程－使用translate,rotate的星空图](https://github.com/AmberYLopez-demos/Canvas-Lessons/blob/master/Lesson2/demo3.html)
+* demo4: [Canvas教程－使用translate,rotate,scale的星空图](https://github.com/AmberYLopez-demos/Canvas-Lessons/blob/master/Lesson2/demo4.html)
+* demo5: [Canvas教程－线性渐变](https://github.com/AmberYLopez-demos/Canvas-Lessons/blob/master/Lesson2/demo5.html)
+* demo6: [Canvas教程－径向渐变](https://github.com/AmberYLopez-demos/Canvas-Lessons/blob/master/Lesson2/demo6.html)
+* demo7: [Canvas教程－使用图片填充画布](https://github.com/AmberYLopez-demos/Canvas-Lessons/blob/master/Lesson2/demo7.html)
+* demo8: [Canvas教程－使用另一个canvas填充画布](https://github.com/AmberYLopez-demos/Canvas-Lessons/blob/master/Lesson2/demo8.html)
+* demo9: [Canvas实战－渐变星空图](https://github.com/AmberYLopez-demos/Canvas-Lessons/blob/master/Lesson2/demo9.html)

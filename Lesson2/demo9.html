@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>星空</title>
+</head>
+<body>
+<canvas id="canvas" style="margin:50px 0 0 250px;"></canvas>
+<script>
+    window.onload = function () {
+        var canvas = document.getElementById("canvas");
+        canvas.width = 600;
+        canvas.height = 400;
+        var context = canvas.getContext("2d");
+
+        var linearGrad = context.createLinearGradient(0, 0, 0, 400);
+        linearGrad.addColorStop(0, '#213244');
+        linearGrad.addColorStop(0.25, '#283D52');
+        linearGrad.addColorStop(0.5, '#2A4359');
+        linearGrad.addColorStop(0.75, '#3B657E');
+        linearGrad.addColorStop(1.0, '#347094');
+        context.fillStyle = linearGrad;
+        context.fillRect(0, 0, canvas.width, canvas.height);
+
+
+        for (var i = 0; i < 50; i++) {
+            //大圆半径 在[2,12)之间
+            var R = Math.random() * 10 + 2;
+            //x轴偏移量
+            var x = Math.random() * canvas.width;
+            //y轴偏移量
+            var y = Math.random() * canvas.height * 0.65;
+            //旋转角度
+            var a = Math.random() * 360;
+            drawStar(context, R, R / 2, x, y, a);
+
+        }
+//
+    };
+
+    function drawStar(cxt, R, r, x, y, a) {
+        cxt.beginPath();
+        for (let i = 0; i < 5; i++) {
+            //绘制大圆上的五个坐标点
+            cxt.lineTo(Math.cos((18 + i * 72 - a) / 180 * Math.PI) * R + x,
+                    -Math.sin((18 + i * 72 - a) / 180 * Math.PI) * R + y);
+            //绘制小圆上的五个坐标点
+            cxt.lineTo(Math.cos((54 + i * 72 - a) / 180 * Math.PI) * r + x,
+                    -Math.sin((54 + i * 72 - a) / 180 * Math.PI) * r + y);
+        }
+        cxt.closePath();
+
+        cxt.fillStyle = "#F8D184";
+        cxt.strokeStyle = "#FAD085";
+        cxt.lineWidth = 3;
+        cxt.lineJoin = "round";
+        cxt.fill();
+        cxt.stroke();
+    }
+
+
+</script>
+</body>
+</html>

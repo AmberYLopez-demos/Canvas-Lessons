@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用canvas</title>
+</head>
+<body>
+<canvas id="canvas" style="margin:50px 0 0 250px;"></canvas>
+<script>
+    window.onload = function () {
+        var canvas = document.getElementById("canvas");
+        canvas.width = 400;
+        canvas.height = 400;
+        var context = canvas.getContext("2d");
+
+        var backCanvas = creatBackCanvas();
+        var pattern = context.createPattern(backCanvas, "repeat");
+        context.fillStyle = pattern;
+        context.fillRect(0, 0, 400, 400);
+    };
+    //创建一个背景画布，画布中绘制一颗星星
+    function creatBackCanvas() {
+        var backCanvas = document.createElement("canvas");
+        backCanvas.width = 100;
+        backCanvas.height = 100;
+
+        var backCanvasContext = backCanvas.getContext("2d");
+        drawStar(backCanvasContext, 50, 50, 20, 0);
+        return backCanvas;
+    }
+    function drawStar(cxt, x, y, R, a) {
+        cxt.beginPath();
+        for (let i = 0; i < 5; i++) {
+            cxt.lineTo(Math.cos((18 + i * 72 - a) / 180 * Math.PI) * R + x,
+                -Math.sin((18 + i * 72 - a) / 180 * Math.PI) * R + y);
+            cxt.lineTo(Math.cos((54 + i * 72 - a) / 180 * Math.PI) * R/2 + x,
+                -Math.sin((54 + i * 72 - a) / 180 * Math.PI) * R/2 + y);
+        }
+        cxt.closePath();
+
+        cxt.fillStyle = "#F8D184";
+        cxt.strokeStyle = "#FAD085";
+        cxt.lineWidth = 3;
+        cxt.lineJoin = "round";
+        cxt.fill();
+        cxt.stroke();
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas使用图片</title>
+</head>s
+<body>
+<canvas id="canvas" style="margin:50px 0 0 250px;"></canvas>
+<script>
+    window.onload = function () {
+        var canvas = document.getElementById("canvas");
+        canvas.width = 300;
+        canvas.height = 300;
+        var context = canvas.getContext("2d");
+
+        var backGroundImage = new Image();
+        backGroundImage.src = "lemon.png";
+        backGroundImage.onload = function () {
+            var pattern = context.createPattern(backGroundImage, "repeat");
+            context.fillStyle = pattern;
+            context.fillRect(0, 0, 300, 300);
+        }
+    }
+</script>
+</body>
+</html>

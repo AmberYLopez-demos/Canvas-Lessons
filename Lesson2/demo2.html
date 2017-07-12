@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图形转换</title>
+</head>
+<body>
+<canvas id="canvas" style="border:1px solid #ccc;margin:50px 0 0 250px;"></canvas>
+<script>
+    window.onload = function () {
+        var canvas = document.getElementById("canvas");
+        canvas.width = 400;
+        canvas.height = 400;
+        var context = canvas.getContext("2d");
+
+        //保存第一个正方形的状态
+        //从(0,0)点开始，x轴平移100像素，y轴平移100像素
+        context.save();
+        context.fillStyle = "#559ABB";
+        context.translate(100,100);
+        context.fillRect(0, 0, 100, 100);
+        context.restore();
+
+        //保存第二个正方形的状态
+        //从(0,0)点开始，x轴平移100像素，y轴平移100像素
+        context.save();
+        context.fillStyle = "#F8D184";
+        context.translate(100,100);
+        context.fillRect(0, 0, 100, 100);
+        context.restore();
+    }
+
+</script>
+</body>
+</html>

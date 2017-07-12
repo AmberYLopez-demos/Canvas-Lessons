@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canvas" style="border:1px solid #ccc;margin:50px 0 0 250px;"></canvas>
+
+<script type="text/javascript">
+    window.onload = function () {
+        var canvas = document.getElementById("canvas");
+        var context = canvas.getContext("2d");
+        canvas.width = 400;
+        canvas.height = 400;
+        context.fillStyle = "#283D52";
+        context.fillRect(0, 0, canvas.width, canvas.height);
+        //假设画布中有50个星星
+        for (var i = 0; i <= 50; i++) {
+            //x轴偏移量
+            var x = Math.random() * canvas.width;
+            //y轴偏移量
+            var y = Math.random() * canvas.height;
+            //任意角度
+            var a = Math.random() * 360;
+
+            draw(context, x, y, a);
+        }
+    };
+
+    //绘制星星
+    function draw(cxt, x, y, rot) {
+        //保存canvas的状态
+        cxt.save();
+        //x,y轴的偏移量
+        cxt.translate(x, y);
+        //旋转的角度
+        cxt.rotate(rot / 180 * Math.PI);
+        //绘制星星的路径
+        starPath(cxt);
+
+        cxt.fillStyle = "#F8D184";
+        cxt.strokeStyle = "#FAD085";
+        cxt.lineWidth = 2;
+        cxt.lineJoin = "round";
+
+        cxt.fill();
+        cxt.stroke();
+        cxt.restore();
+    }
+
+    //绘制一个星星的路径,这里绘制星星时设定大圆半径为10，小圆半径为大圆半径的一半
+    function starPath(cxt) {
+        cxt.beginPath();
+        for (var i = 0; i < 5; i++) {
+            cxt.lineTo(Math.cos((18 + i * 72) / 180 * Math.PI) * 10,
+                -Math.sin((18 + i * 72) / 180 * Math.PI) * 10);
+            cxt.lineTo(Math.cos((54 + i * 72) / 180 * Math.PI) * 0.5 * 10,
+                -Math.sin((54 + i * 72) / 180 * Math.PI) * 0.5 * 10);
+        }
+        cxt.closePath();
+    }
+
+</script>
+</body>
+</html>

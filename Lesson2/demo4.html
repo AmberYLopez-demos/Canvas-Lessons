@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canvas" style="border:1px solid #ccc;margin:50px 0 0 250px;"></canvas>
+
+<script>
+    window.onload = function () {
+        var canvas = document.getElementById("canvas");
+        canvas.width = 400;
+        canvas.height = 400;
+        var context = canvas.getContext("2d");
+
+        context.fillStyle = "#283D52";
+        context.fillRect(0, 0, canvas.width, canvas.height);
+        for (var i = 0; i < 80; i++) {
+            //大圆半径 在[5-15)
+            var R = Math.random() * 10 + 5;
+            //x轴偏移量 星星在画布内
+            var x = Math.random() * canvas.width;
+            //y轴偏移量 星星在画布内
+            var y =Math.random() * canvas.height;
+            //旋转角度
+            var a = Math.random() * 360;
+            drawStar(context, x, y, R, a);
+
+        }
+    };
+    function drawStar(cxt, x, y, R, rot) {
+        cxt.save();
+        //x,y轴的偏移量
+        cxt.translate(x, y);
+        //旋转的角度
+        cxt.rotate(rot / 180 * Math.PI);
+        //缩放的大小
+        cxt.scale(R, R);
+        drawPath(cxt);
+
+        cxt.fillStyle = "#F8D184";
+        cxt.lineJoin = "round";
+        cxt.fill();
+
+        cxt.restore();
+
+    }
+    //绘制一个星星的路径(绘制的星星看不见，因为这里没有设置半径，在上面用scale控制半径)
+    function drawPath(cxt) {
+        cxt.beginPath();
+        for (var i = 0; i < 5; i++) {
+            //绘制大圆上的五个坐标点
+            cxt.lineTo(Math.cos((18 + i * 72 ) / 180 * Math.PI),
+                -Math.sin((18 + i * 72) / 180 * Math.PI));
+            //绘制小圆上的五个坐标点
+            cxt.lineTo(Math.cos((54 + i * 72) / 180 * Math.PI) * 0.5,
+                -Math.sin((54 + i * 72) / 180 * Math.PI) *0.5);
+        }
+        cxt.closePath();
+    }
+</script>
+</body>
+</html>
