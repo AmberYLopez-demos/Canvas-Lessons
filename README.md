@@ -20,6 +20,11 @@
 
 
 ### Canvas从入门到放弃(二)
+*主要是Canvas的图形变换及样式填充属性*
+
+
+**课程列表**
+
 * demo1: [Canvas教程－图形的变换(translate)](https://github.com/AmberYLopez-demos/Canvas-Lessons/blob/master/Lesson2/demo1.html)
 * demo2: [Canvas教程－图形的变换与保存](https://github.com/AmberYLopez-demos/Canvas-Lessons/blob/master/Lesson2/demo2.html)
 * demo3: [Canvas教程－使用translate,rotate的星空图](https://github.com/AmberYLopez-demos/Canvas-Lessons/blob/master/Lesson2/demo3.html)
