@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字体</title>
+</head>
+<body>
+<canvas id="canvas" style="margin:50px 0 0 250px;border: 1px solid #cccccc"></canvas>
+
+<script>
+    window.onload = function () {
+        var canvas = document.getElementById("canvas");
+        canvas.width = 700;
+        canvas.height = 400;
+        var context = canvas.getContext("2d");
+
+        context.font = "bold 30px Arial";
+
+        //第一行字有填充色
+        context.fillStyle = "#058";
+        context.fillText("欢迎大家学习《Canvas从入门到放弃(三)》!", 40, 40);
+
+        //第二行字描边
+        context.strokeStyle = "#058";
+        context.strokeText("欢迎大家学习《Canvas从入门到放弃(三)》!", 40, 100);
+
+        //第三行字
+        context.fillStyle = "#058";
+        context.fillText("欢迎大家学习《Canvas从入门到放弃(三)》!", 40, 160,400);
+
+        //第四行字
+        context.strokeStyle = "#058";
+        context.strokeText("欢迎大家学习《Canvas从入门到放弃(三)》!", 40, 210,400);
+
+        //渐变颜色字
+        var linearGrad = context.createLinearGradient(0, 0, 800, 0);
+        linearGrad.addColorStop(0, '#efb164');
+        linearGrad.addColorStop(0.25, '#f1ec5d');
+        linearGrad.addColorStop(0.5, '#bde379');
+        linearGrad.addColorStop(0.75, '#7bd3ab');
+        linearGrad.addColorStop(1, '#b2c9e9');
+        context.fillStyle = linearGrad;
+        context.fillText("欢迎大家学习《Canvas从入门到放弃(三)》!", 40, 270);
+
+
+
+    }
+</script>
+</body>
+</html>

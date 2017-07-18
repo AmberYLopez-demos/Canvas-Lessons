@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>arcTo()</title>
+</head>
+<body>
+<canvas id="canvas" style="border:1px solid #ccc;margin:50px 0 0 150px;"></canvas>
+<script>
+    window.onload = function () {
+        var canvas = document.getElementById("canvas");
+        canvas.width = 1000;
+        canvas.height = 700;
+        var context = canvas.getContext("2d");
+
+        //用arcTo绘制弧线
+        context.beginPath();
+        context.moveTo(100, 100);
+        context.arcTo(550, 100, 550, 550, 300);
+
+        context.lineWidth = 3;
+        context.strokeStyle = "#E5786E";
+        context.stroke();
+
+        context.closePath();
+
+        //辅助线
+        context.beginPath();
+        context.moveTo(100, 100);
+        context.lineTo(550, 100);
+        context.lineTo(550, 550);
+
+        context.lineWidth = 1;
+        context.strokeStyle = "black";
+        context.stroke();
+
+        context.closePath();
+    }
+
+</script>
+</body>
+</html>

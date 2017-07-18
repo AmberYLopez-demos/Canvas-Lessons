@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绘制弧线</title>
+</head>
+<body>
+<canvas id="canvas" style="border:1px solid #ccc;margin:50px 0 0 150px;"></canvas>
+<script>
+    window.onload = function () {
+        var canvas = document.getElementById("canvas");
+        canvas.width = 1000;
+        canvas.height = 500;
+        var context = canvas.getContext("2d");
+
+        context.lineWidth = 5;
+        context.strokeStyle = "#005588";
+
+        //第一行
+        for (var i = 0; i < 10; i++) {
+            context.beginPath();
+            context.arc(50 + i * 100, 60, 40, 0, 2 * Math.PI*(i + 1) / 10);
+            context.stroke();
+        }
+        //第二行
+        for (var i = 0; i < 10; i++) {
+            context.beginPath();
+            context.arc(50+ i * 100, 180, 40, 0, 2 * Math.PI*(i + 1) / 10);
+            context.closePath();
+
+            context.stroke();
+        }
+        //第三行
+        for (var i = 0; i < 10; i++) {
+            context.beginPath();
+            context.arc(50 + i * 100, 300, 40, 0, 2 * Math.PI*(i + 1) / 10,true);
+            context.stroke();
+        }
+        //第四行
+        for (var i = 0; i < 10; i++) {
+            context.beginPath();
+            context.arc(50+ i * 100, 420, 40, 0, 2 * Math.PI*(i + 1) / 10,true);
+            context.closePath();
+
+            context.stroke();
+        }
+    }
+
+</script>
+</body>
+</html>

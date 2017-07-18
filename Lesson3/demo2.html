@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绘制圆角矩形</title>
+</head>
+<body>
+<canvas id="canvas" style="border:1px solid #ccc;margin:50px 0 0 150px;"></canvas>
+<script>
+    window.onload = function () {
+        var canvas = document.getElementById("canvas");
+        canvas.width = 800;
+        canvas.height = 600;
+        var context = canvas.getContext("2d");
+
+        strokeRoundRect(context, 200, 100, 300,200, 50)
+    };
+
+    function strokeRoundRect(cxt, x, y, width, height, r, lineWidth, strokeColor) {
+
+        cxt.save();
+        cxt.translate(x, y);
+        pathRoundRect(cxt, width, height, r);
+        cxt.lineWidth = lineWidth || 1;
+        cxt.strokeStyle = strokeColor || '#005588';
+        cxt.stroke();
+        cxt.restore();
+    }
+    function pathRoundRect(cxt, width, height, r) {
+        cxt.beginPath();
+        //右下
+        cxt.arc(width - r, height - r, r, 0,Math.PI / 2);
+        //下面
+        cxt.lineTo(r, height);
+        //左下
+        cxt.arc(r, height - r, r, Math.PI / 2, Math.PI);
+        //左边
+        cxt.lineTo(0, r);
+        //左上
+        cxt.arc(r, r, r, Math.PI, Math.PI * 3 / 2);
+        //上边
+        cxt.lineTo(width - r, 0);
+        //右上
+        cxt.arc(width - r, r, r, Math.PI * 3 / 2, Math.PI * 2);
+        //右边
+        cxt.closePath();
+    }
+</script>
+</body>
+</html>

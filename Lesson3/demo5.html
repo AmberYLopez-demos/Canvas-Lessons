@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弯月</title>
+</head>
+<body>
+<canvas id="canvas" style="border:1px solid #ccc;margin:50px 0 0 150px;"></canvas>
+<script>
+    window.onload = function () {
+        var canvas = document.getElementById("canvas");
+        canvas.width = 1000;
+        canvas.height = 800;
+        var context = canvas.getContext("2d");
+        //圆心坐标(400,400),半径300,从0.5Pi到1.5Pi逆时针绘制一段圆弧
+        context.arc(400, 400, 300, 0.5 * Math.PI, 1.5 * Math.PI, true);
+        //将起始点移动到(400,100)
+        context.moveTo(400, 100);
+        //R = (AC*AH)/HC,其中AC用两点距离坐标来计算
+        context.arcTo(1200, 400, 400, 700, (400 - 100) * dis(400, 100, 1200, 400) / (1200 - 400));
+        context.stroke();
+    };
+    //计算两个坐标之间的距离
+    function dis(x1, y1, x2, y2) {
+        return Math.sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
+    }
+</script>
+</body>
+</html>

@@ -35,3 +35,21 @@
 * demo7: [Canvas教程－使用图片填充画布](https://github.com/AmberYLopez-demos/Canvas-Lessons/blob/master/Lesson2/demo7.html)
 * demo8: [Canvas教程－使用另一个canvas填充画布](https://github.com/AmberYLopez-demos/Canvas-Lessons/blob/master/Lesson2/demo8.html)
 * demo9: [Canvas实战－渐变星空图](https://github.com/AmberYLopez-demos/Canvas-Lessons/blob/master/Lesson2/demo9.html)
+
+### Canvas从入门到放弃(s三)
+*主要是Canvas的曲线及文字的绘制*
+
+博客详细教程：[Canvas从入门到放弃(三)]()
+
+**课程列表**
+
+* demo1: [Canvas教程－绘制一段弧](https://github.com/AmberYLopez-demos/Canvas-Lessons/blob/master/Lesson3/demo1.html)
+* demo2: [Canvas教程－绘制圆角矩形](https://github.com/AmberYLopez-demos/Canvas-Lessons/blob/master/Lesson3/demo2.html)
+* demo3: [Canvas教程－绘制一个棋盘格](https://github.com/AmberYLopez-demos/Canvas-Lessons/blob/master/Lesson3/demo3.html)
+* demo4: [Canvas教程－用arcTo()绘制弧线](https://github.com/AmberYLopez-demos/Canvas-Lessons/blob/master/Lesson3/demo4.html)
+* demo5: [Canvas教程－用arcTo()绘制一轮弯月](https://github.com/AmberYLopez-demos/Canvas-Lessons/blob/master/Lesson3/demo5.html)
+* demo6: [Canvas教程－将绘制的弯月挂到星空上](https://github.com/AmberYLopez-demos/Canvas-Lessons/blob/master/Lesson3/demo6.html)
+* demo7: [Canvas教程－用二次贝塞尔曲线绘制一轮弯月](https://github.com/AmberYLopez-demos/Canvas-Lessons/blob/master/Lesson3/demo7.html)
+* demo8: [Canvas教程－用三次贝塞尔曲线绘制草地](https://github.com/AmberYLopez-demos/Canvas-Lessons/blob/master/Lesson3/demo8.html)
+* demo9: [Canvas教程－绘制文字](https://github.com/AmberYLopez-demos/Canvas-Lessons/blob/master/Lesson3/demo9.html)
+* demo10: [Canvas实战－最终星空图](https://github.com/AmberYLopez-demos/Canvas-Lessons/blob/master/Lesson3/demo10.html)
