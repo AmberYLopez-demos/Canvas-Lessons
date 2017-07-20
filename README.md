@@ -36,7 +36,7 @@
 * demo8: [Canvas教程－使用另一个canvas填充画布](https://github.com/AmberYLopez-demos/Canvas-Lessons/blob/master/Lesson2/demo8.html)
 * demo9: [Canvas实战－渐变星空图](https://github.com/AmberYLopez-demos/Canvas-Lessons/blob/master/Lesson2/demo9.html)
 
-### Canvas从入门到放弃(s三)
+### Canvas从入门到放弃(三)
 *主要是Canvas的曲线及文字的绘制*
 
 博客详细教程：[Canvas从入门到放弃(三)](http://www.jianshu.com/p/36f0ee92c899)
