@@ -39,7 +39,7 @@
 ### Canvas从入门到放弃(s三)
 *主要是Canvas的曲线及文字的绘制*
 
-博客详细教程：[Canvas从入门到放弃(三)]()
+博客详细教程：[Canvas从入门到放弃(三)](http://www.jianshu.com/p/36f0ee92c899)
 
 **课程列表**
 
